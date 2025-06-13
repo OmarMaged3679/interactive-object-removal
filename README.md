@@ -24,7 +24,7 @@ Runs entirely in Google Colab — no local setup required.
 
 | Notebook                                                                                                       | Description                                                              |
 | -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| [`semantic-object-removal-with-stable-diffusion.ipynb`](./semantic-object-removal-with-stable-diffusion.ipynb) | Select objects using panoptic segmentation, remove with Stable Diffusion |
+| [`object_removal_via_segmentation_and_prompts.ipynb`](./object_removal_via_segmentation_and_prompts.ipynb) | Select objects using panoptic segmentation, remove with Stable Diffusion |
 | [`freehand-object-removal-with-lama.ipynb`](./freehand-object-removal-with-lama.ipynb)                         | Manually draw over regions to remove using LaMa inpainting               |
 
 ---
