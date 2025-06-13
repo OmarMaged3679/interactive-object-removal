@@ -27,8 +27,26 @@ Runs entirely in Google Colab — no local setup required.
 | [`semantic-object-removal-with-stable-diffusion.ipynb`](object_removal_via_segmentation_and_prompts.ipynb) | Select objects using panoptic segmentation and regenerate the masked area using Stable Diffusion. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/OmarMaged3679/interactive-object-removal/blob/main/object_removal_via_segmentation_and_prompts.ipynb) |
 | [`freehand-object-removal-with-lama.ipynb`](freehand-object-removal-with-lama.ipynb) | Manually draw over objects to remove and inpaint using LaMa. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/OmarMaged3679/interactive-object-removal/blob/main/freehand-object-removal-with-lama.ipynb) |
 
+---
+
+### ✏️ Freehand Example (LaMa)
+
+In the **freehand notebook**, users can draw directly over areas they want to remove using an HTML5 canvas. Once finished, clicking the **“Finish”** button will generate a mask and trigger inpainting with LaMa.
+
+> 🎨 Simply **click and drag** to draw the mask over the object you want to erase. Then click **Finish** to generate the binary mask and continue.
+
+#### 🖼️ Example Output
+
+![LaMa Freehand Inpainting Example](./assets/lama_example_result.png)
+
+* **Top Left:** Binary mask (white = area to remove)
+* **Top Center:** Original image
+* **Top Right:** Image with mask applied
+* **Bottom:** Final inpainted result with LaMa
 
 ---
+
+
 
 ## 🧰 Tech Stack
 
