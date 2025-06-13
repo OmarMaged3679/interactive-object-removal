@@ -12,8 +12,8 @@ Runs entirely in Google Colab — no local setup required.
 ## ✨ Features
 
 * 🔍 **Semantic segmentation** with [Mask2Former](https://huggingface.co/facebook/mask2former-swin-large-coco-panoptic) (COCO labels)
-* 🧠 **Text-guided inpainting** with [Stable Diffusion 2 Inpainting](https://huggingface.co/stabilityai/stable-diffusion-2-inpainting)
-* ✏️ **Freehand masking** via interactive HTML5 canvas
+* 🧠 **Prompt-based inpainting** with [Stable Diffusion 2 Inpainting](https://huggingface.co/stabilityai/stable-diffusion-2-inpainting)
+* ✏️ **Freehand masking** via interactive HTML5 canvas in Colab
 * 🧽 **Fast inpainting** using [LaMa](https://github.com/saic-mdal/lama) (via [simple-lama-inpainting](https://github.com/enesmsahin/simple-lama-inpainting))
 * 🖼️ Visual output with overlay masks and multiple regenerated results
 * ☁️ Zero setup — designed for Google Colab
@@ -22,20 +22,20 @@ Runs entirely in Google Colab — no local setup required.
 
 ## 📁 Notebooks
 
-| Notebook                                                                                                       | Description                                                              |
-| -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| [`object_removal_via_segmentation_and_prompts.ipynb`](./object_removal_via_segmentation_and_prompts.ipynb) | Select objects using panoptic segmentation, remove with Stable Diffusion |
-| [`freehand-object-removal-with-lama.ipynb`](./freehand-object-removal-with-lama.ipynb)                         | Manually draw over regions to remove using LaMa inpainting               |
+| Notebook | Description | Open in Colab |
+|----------|-------------|----------------|
+| [`semantic-object-removal-with-stable-diffusion.ipynb`](object_removal_via_segmentation_and_prompts.ipynb) | Select objects using panoptic segmentation and regenerate the masked area using Stable Diffusion. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/OmarMaged3679/interactive-object-removal/blob/main/object_removal_via_segmentation_and_prompts.ipynb) |
+| [`freehand-object-removal-with-lama.ipynb`](freehand-object-removal-with-lama.ipynb) | Manually draw over objects to remove and inpaint using LaMa. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/OmarMaged3679/interactive-object-removal/blob/main/freehand-object-removal-with-lama.ipynb) |
+
 
 ---
 
-## 🛠️ Dependencies
+## 🧰 Tech Stack
 
-Installations are handled automatically in Colab, but core libraries include:
-
-* `diffusers`, `transformers`, `torch`, `PIL`
-* `OpenCV`, `matplotlib`, `numpy`
-* `simple-lama-inpainting` (for LaMa mode)
+* **Segmentation:** Mask2Former (COCO panoptic labels)
+* **Generative Inpainting:** Stable Diffusion v2
+* **Freehand Inpainting:** LaMa (via simple-lama-inpainting)
+* **Frameworks & Libraries:** PyTorch, Hugging Face Diffusers & Transformers, OpenCV, PIL, Matplotlib, Google Colab
 
 ---
 
@@ -56,14 +56,17 @@ Installations are handled automatically in Colab, but core libraries include:
 
 ---
 
-## 🖼️ Example Output
+## 🖼️ Image Attribution
 
-*(You can add example images in the `assets/` folder and reference them here)*
+The images used in the examples are licensed stock photos included for educational and non-commercial demonstration:
 
-```markdown
-![Example using Mask2Former and Stable Diffusion](assets/stable_example.png)
-![Example using LaMa freehand mask](assets/lama_example.png)
-```
+* 🧍‍♀️ *Two People Talking on a Park Bench*
+  [Mindframe](https://mindframeimages.org.au/product/two-people-talking-sitting-on-a-park-bench-4/)
+
+* 🏙️ *People on Bourke Street, Melbourne*
+  [Alamy](https://www.alamy.com/melbourne-australia-21st-february-2018-people-on-bourke-street-the-street-is-in-the-heart-of-the-main-shopping-area-image231206654.html)
+
+> For public or commercial use, please use your own images or ensure you have proper rights.
 
 ---
 
